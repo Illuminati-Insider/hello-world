@@ -3,7 +3,7 @@ case "list":
 		$subjID=$data['subjectID'];
 		$query = "-- Получение списка альбомов для предмета
 						SELECT * FROM `albums` 
-					WHERE `id` IN (SELECT `Albums_ID` FROM `SubjectAlbums` WHERE `Subjects_ID` LIKE $subjID;)";
+					WHERE `id` IN (SELECT `Albums_ID` FROM `SubjectAlbums` WHERE `Subjects_ID` LIKE $subjID);";
 		if ($result = $mysql->query($query)) {	
 			$outputsub = array();
 			while ($row = $result->fetch_row())  {

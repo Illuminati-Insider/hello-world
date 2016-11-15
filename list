@@ -1,3 +1,4 @@
+<?php
 case "list":
 		$subjID=$data['subjectID'];
 		$query = "-- Получение списка альбомов для предмета
